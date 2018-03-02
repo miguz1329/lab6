@@ -1,6 +1,6 @@
 // Michael Guzman 
 #include "fonts.h"
-
+#include <GL/glx.h> 
 void showName()
 {
 
@@ -16,7 +16,7 @@ void drawBox(int x, int y)
 {
     static float angle = 0.0;
 
-     glColor3fv(255, 100, 10);
+     glColor3ub(255, 100, 10);
      glPushMatrix();
      glTranslatef(x, y, 0);
      glRotatef(angle, 0.0f, 0.0f, 1.0f);
