@@ -10,7 +10,7 @@ void showName()
     r.center = 0;
     ggprint8b(&r, 16, 0x00ff0000, "Michael Guzman");
 
-
+}
 
 void drawBox(int x, int y)
 {
