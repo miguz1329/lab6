@@ -288,6 +288,7 @@ void physics();
 void render();
 //external function prototypes
 extern void showName(const char* name);
+extern void drawBox(int, int);
 //==========================================================================
 // M A I N
 //==========================================================================
@@ -833,7 +834,8 @@ void render()
 	++b;
     }
     	showName("Michael Guzman");
-        ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
+        drawBox(gl.xres/2, gl.yres/2);
+	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids destroyed: %i", g.ndestroyed);

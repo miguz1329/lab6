@@ -1,7 +1,7 @@
 // Michael Guzman 
 #include "fonts.h"
 #include <GL/glx.h> 
-void showName()
+void showName(const char * name)
 {
 
     Rect r;
@@ -20,6 +20,7 @@ void drawBox(int x, int y)
      glPushMatrix();
      glTranslatef(x, y, 0);
      glRotatef(angle, 0.0f, 0.0f, 1.0f);
+     glTranslatef(-50, -50, 0);
      angle = angle + 2.5;
      glBegin(GL_QUADS);
 	glVertex2i( 0, 0);
@@ -33,7 +34,7 @@ void drawBox(int x, int y)
     r.bot = 50;
     r.left = 50;
     r.center = 1;
-    ggprint8b(&r, 16, 0x00fffff, "Michael Guzman"
+    ggprint8b(&r, 16, 0x00fffff, "Michael Guzman");
      glPopMatrix();
 }
 
